@@ -1,8 +1,0 @@
-version: "Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)"
-options: "617c2c1ad933ddf9df947d77aaad7926"
-build_time: [1752827939, 805165000]
-inputs:
-  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/Constants.swift": [1752827380, 925482164]
-  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/Helper.swift": [1752827931, 338114048]
-  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/StarDots.swift": [1752827921, 996047441]
-  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/Types.swift": [1752827454, 412117018]
