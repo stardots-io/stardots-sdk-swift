@@ -1,0 +1,29 @@
+{
+  "": {
+    "swift-dependencies": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/master.swiftdeps"
+  },
+  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/Constants.swift": {
+    "dependencies": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Constants.d",
+    "object": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Constants.swift.o",
+    "swiftmodule": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Constants~partial.swiftmodule",
+    "swift-dependencies": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Constants.swiftdeps"
+  },
+  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/Helper.swift": {
+    "dependencies": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Helper.d",
+    "object": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Helper.swift.o",
+    "swiftmodule": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Helper~partial.swiftmodule",
+    "swift-dependencies": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Helper.swiftdeps"
+  },
+  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/StarDots.swift": {
+    "dependencies": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/StarDots.d",
+    "object": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/StarDots.swift.o",
+    "swiftmodule": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/StarDots~partial.swiftmodule",
+    "swift-dependencies": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/StarDots.swiftdeps"
+  },
+  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/Types.swift": {
+    "dependencies": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Types.d",
+    "object": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Types.swift.o",
+    "swiftmodule": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Types~partial.swiftmodule",
+    "swift-dependencies": "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Types.swiftdeps"
+  }
+}

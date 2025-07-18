@@ -1,0 +1,4 @@
+module StarDotsSDK {
+    header "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/StarDotsSDK-Swift.h"
+    requires objc
+}

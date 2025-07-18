@@ -1,0 +1,88 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "StarDotsSDK-debug.module": ["<StarDotsSDK-debug.module>"]
+  "StarDotsSDKPackageTests-debug.test": ["<StarDotsSDKPackageTests-debug.test>"]
+  "StarDotsSDKTests-debug.module": ["<StarDotsSDKTests-debug.module>"]
+  "main": ["<StarDotsSDK-debug.module>"]
+  "test": ["<StarDotsSDK-debug.module>","<StarDotsSDKPackageTests-debug.test>","<StarDotsSDKTests-debug.module>"]
+default: "main"
+nodes:
+  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Tests/StarDotsSDKTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/Constants.swift","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/Helper.swift","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/StarDots.swift","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/Types.swift"]
+    outputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/sources"]
+    description: "Write auxiliary file /private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/sources"
+
+  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Constants.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Helper.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/StarDots.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Types.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.build/StarDotsTests.swift.o"]
+    outputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKPackageTests.product/Objects.LinkFileList"
+
+  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Tests/StarDotsSDKTests/StarDotsTests.swift"]
+    outputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.build/sources"]
+    description: "Write auxiliary file /private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.build/sources"
+
+  "/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<StarDotsSDK-debug.module>":
+    tool: phony
+    inputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Constants.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Helper.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/StarDots.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Types.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.swiftmodule"]
+    outputs: ["<StarDotsSDK-debug.module>"]
+
+  "<StarDotsSDKPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKPackageTests.xctest/Contents/MacOS/StarDotsSDKPackageTests"]
+    outputs: ["<StarDotsSDKPackageTests-debug.test>"]
+
+  "<StarDotsSDKTests-debug.module>":
+    tool: phony
+    inputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.build/StarDotsTests.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.swiftmodule"]
+    outputs: ["<StarDotsSDKTests-debug.module>"]
+
+  "C.StarDotsSDK-debug.module":
+    tool: shell
+    inputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/Constants.swift","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/Helper.swift","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/StarDots.swift","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/Types.swift","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/sources"]
+    outputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Constants.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Helper.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/StarDots.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Types.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.swiftmodule"]
+    description: "Compiling Swift Module 'StarDotsSDK' (4 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","StarDotsSDK","-emit-dependencies","-emit-module","-emit-module-path","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.swiftmodule","-output-file-map","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/output-file-map.json","-parse-as-library","-incremental","-c","@/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/sources","-I","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug","-target","x86_64-apple-macosx10.15","-swift-version","5","-enable-batch-mode","-index-store-path","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/StarDotsSDK-Swift.h","-color-diagnostics","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g"]
+
+  "C.StarDotsSDKPackageTests-debug.test":
+    tool: shell
+    inputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Constants.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Helper.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/StarDots.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.build/Types.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.build/StarDotsTests.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKPackageTests.xctest/Contents/MacOS/StarDotsSDKPackageTests"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/StarDotsSDKPackageTests.xctest/Contents/MacOS/StarDotsSDKPackageTests"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug","-o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKPackageTests.xctest/Contents/MacOS/StarDotsSDKPackageTests","-module-name","StarDotsSDKPackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-5.5/macosx","-target","x86_64-apple-macosx10.15","-Xlinker","-add_ast_path","-Xlinker","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.swiftmodule","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g"]
+
+  "C.StarDotsSDKTests-debug.module":
+    tool: shell
+    inputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Tests/StarDotsSDKTests/StarDotsTests.swift","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDK.swiftmodule","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.build/sources"]
+    outputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.build/StarDotsTests.swift.o","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.swiftmodule"]
+    description: "Compiling Swift Module 'StarDotsSDKTests' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","StarDotsSDKTests","-emit-dependencies","-emit-module","-emit-module-path","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.swiftmodule","-output-file-map","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/StarDotsSDKTests.build/sources","-I","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug","-target","x86_64-apple-macosx10.15","-swift-version","5","-enable-batch-mode","-index-store-path","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Sources/StarDotsSDK/","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Tests/StarDotsSDKTests/","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Package.swift","/private/var/www/keepchen/stardots-referer/stardots-io/stardots-sdk-swift/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
